@@ -1,0 +1,103 @@
+@charset "ISO-8859-1";
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    height: 100vh;
+    background: url('https://img.freepik.com/free-vector/pink-blue-swirl-gradient_78370-261.jpg?ga=GA1.1.1743969352.1747456703&semt=ais_hybrid&w=740') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+/* Login Form Container */
+.login-container {
+    background: rgb(255, 255, 255,0.2);
+    padding: 30px;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 400px;
+    height:100%;
+    max-height:360px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    display:flex;
+    flex-direction: column;
+    gap:10px;
+}
+
+/* Heading */
+h2 {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 10px;
+
+}
+p {
+  text-align: center;
+      margin-bottom: 20px;
+}
+
+/* Input Fields */
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.5); /* subtle white border */
+    border-radius: 6px;
+
+    color: #fff; /* Adjusted for better contrast on transparent BG */
+    font-size: 14px;
+
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* On focus, slightly highlight the border */
+input[type="text"]:focus,
+input[type="password"]:focus {
+    border-color: #66afe9;
+    box-shadow: 0 0 4px rgba(102, 175, 233, 0.6);
+    outline: none;
+}
+
+/* Submit Button */
+input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+   	margin-top:20px;
+    background: linear-gradient(to right, #1e3c72, #2a5298); /* blue gradient */
+    border: none;
+    border-radius: 6px;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+
+    transition: background 0.3s, transform 0.2s;
+}
+
+input[type="submit"]:hover {
+    background: linear-gradient(to right, #17407e, #245caa); /* darker on hover */
+    transform: translateY(-1px);
+}
+
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+/* Error Message */
+.error-message {
+    color: red;
+    text-align: center;
+    margin-top: 10px;
+}

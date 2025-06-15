@@ -1,0 +1,590 @@
+/* General styles */
+@charset "ISO-8859-1";
+
+body {
+  background-color: #f9fafc;
+  color: #0f172a;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.text-right {
+  text-align: right;
+}
+
+/* App container */
+.app-container {
+  display: flex;
+  max-height: 100vh;
+}
+
+/* Sidebar styles */
+.sidebar {
+  background-color: #0f172a;
+  width: 16rem;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  user-select: none;
+  height: 100vh;
+  overflow: hidden;
+  position: sticky;
+  top: 0;
+}
+
+.sidebar-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1.5rem 1.5rem;
+  border-bottom: 1px solid #1e293b;
+}
+
+.sidebar-icon {
+  font-size: 1.125rem;
+}
+
+.sidebar-title {
+  font-weight: 600;
+  font-size: 1.125rem;
+}
+
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  padding: 1.5rem 1rem;
+  font-size: 0.875rem;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  border-radius: 0.375rem;
+  text-decoration: none;
+  color: white;
+  transition: background-color 0.2s ease;
+}
+
+.nav-link:hover {
+  background-color: #1e293b;
+}
+
+.card-subtitle {
+  font-size: 0.9rem;
+  color: #94a3b8;
+  margin-top: 0.2rem;
+}
+
+.nav-link.active {
+  background-color: #1e293b;
+  font-weight: 500;
+}
+
+.nav-link i {
+  width: 1.25rem;
+  text-align: center;
+}
+/* Sleek Professional Main Content Design */
+.main-content {
+  flex: 1;
+  padding: 28px 32px;
+  background-color: #f8f9fc;
+  overflow-y: auto;
+  max-height: 100vh;
+  color: #334155;
+  position: relative;
+  transition: all 0.3s ease;
+  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.03);
+}
+
+/* Content section enhancements */
+.main-content .content-section {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+/* Card refinements */
+.main-content .content-card {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  padding: 24px;
+  margin-bottom: 24px;
+  border: 1px solid rgba(226, 232, 240, 0.8);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.main-content .content-card:hover {
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  transform: translateY(-2px);
+}
+
+/* Card header styling */
+.main-content .card-header {
+  margin-bottom: 20px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.main-content .card-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #1e293b;
+  letter-spacing: -0.01em;
+  margin: 0 0 8px 0;
+}
+
+/* Filter container */
+.main-content .filter-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 16px;
+  background-color: #f8fafc;
+  border-radius: 8px;
+  padding: 18px;
+  margin-bottom: 24px;
+  border: 1px solid #f1f5f9;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  align-items: center;
+  justify-items: center;
+}
+
+/* Table refinements */
+.main-content .attendance-table {
+  border-collapse: separate;
+  border-spacing: 0;
+  width: 100%;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.main-content .attendance-table th {
+  background-color: #f8fafc;
+  color: #475569;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 0.05em;
+  padding: 14px 16px;
+  border-bottom: 2px solid #e2e8f0;
+}
+
+.main-content .attendance-table td {
+  padding: 16px;
+  border-bottom: 1px solid #f1f5f9;
+  vertical-align: middle;
+  font-size: 14px;
+}
+
+.main-content .attendance-table tr:last-child td {
+  border-bottom: none;
+}
+
+.main-content .attendance-table tr:hover {
+  background-color: #f8fafc;
+}
+
+/* Status badges */
+.main-content .status-badge {
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+}
+
+/* Form fields styling */
+.main-content .form-input {
+  border-radius: 6px;
+  border: 1px solid #e2e8f0;
+  padding: 10px 14px;
+  font-size: 14px;
+  transition: all 0.2s ease;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  width: 100%;
+  box-sizing: border-box;
+  outline:none;
+  height:36px;
+}
+
+.main-content .form-input:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+/* Action buttons styling */
+.main-content .action-btn {
+  font-weight: 600;
+  padding: 8px 12px;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.main-content .action-btn i {
+  font-size: 12px;
+}
+
+/* Button Styling - Clean and Professional */
+.submit-btn,
+.clear-btn,
+.action-btn {
+  font-weight: 600;
+  font-size: 14px;
+  padding: 10px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  border: none;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-width: 100px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  height: 35px;
+}
+
+/* Filter buttons styling */
+.submit-btn {
+  background-color: #3b82f6;
+  color: white;
+}
+
+.submit-btn:hover {
+  background-color: #2563eb;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 6px rgba(37, 99, 235, 0.15);
+}
+
+.submit-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 1px 2px rgba(37, 99, 235, 0.15);
+}
+
+.clear-btn {
+  background-color: #f1f5f9;
+  color: #475569;
+  border: 1px solid #e2e8f0;
+}
+
+.clear-btn:hover {
+  background-color: #e2e8f0;
+  color: #1e293b;
+}
+
+.clear-btn:active {
+  background-color: #cbd5e1;
+}
+
+/* Action buttons styling */
+.action-btn {
+  min-width: 90px;
+  padding: 8px 12px;
+}
+
+.action-btn i {
+  font-size: 12px;
+}
+
+.approve-btn {
+  background-color: #10b981;
+  color: white;
+}
+
+.approve-btn:hover {
+  background-color: #059669;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 6px rgba(5, 150, 105, 0.15);
+}
+
+.approve-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 1px 2px rgba(5, 150, 105, 0.15);
+}
+
+.reject-btn {
+  background-color: #f43f5e;
+  color: white;
+}
+
+.reject-btn:hover {
+  background-color: #e11d48;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 6px rgba(225, 29, 72, 0.15);
+}
+
+.reject-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 1px 2px rgba(225, 29, 72, 0.15);
+}
+
+/* Button group styling */
+.button-group {
+  display: flex;
+  gap: 12px;
+  margin-top: 0;
+  align-self: flex-center;
+  padding-top: 10px;
+}
+
+/* Form group and layout improvements */
+.form-group {
+  flex: 1;
+  min-width: 200px;
+  margin-bottom: 16px;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: #475569;
+  font-size: 14px;
+}
+
+.filter-group {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  gap: 20px;
+  background-color: #f8fafc;
+  border-radius: 12px;
+  padding: 24px;
+  margin-bottom: 24px;
+  border: 1px solid #f1f5f9;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.form-select{
+	border-radius: 6px;
+    border: 1px solid #e2e8f0;
+    padding: 10px 14px;
+    font-size: 14px;
+    transition: all 0.2s ease;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    width: 100%;
+    box-sizing: border-box;
+    outline: none;
+    height: 36px;
+}
+
+.filter-group .form-group {
+  flex: 1;
+  min-width: 180px;
+  margin-bottom: 0;
+}
+
+.filter-group .submit-btn {
+  align-self: flex-end;
+  margin-bottom: 1px; /* Slight adjustment to align with inputs */
+  min-height: 40px;
+}
+
+.form-group textarea {
+  outline: none;
+}
+
+input[type="date"] {
+  appearance: none;
+  -webkit-appearance: none;
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 10px 14px;
+  font-size: 14px;
+  color: #334155;
+  width: 100%;
+  box-sizing: border-box;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  transition: all 0.2s ease;
+  cursor: pointer;
+  font-family: inherit;
+  min-height: 44px;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  color: #64748b;
+  opacity: 0.8;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  filter: invert(0.4);
+  height: 15px;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator:hover {
+  opacity: 1;
+  filter: invert(0.6);
+  transform: scale(1.1);
+}
+
+input[type="date"]:hover {
+  border-color: #cbd5e1;
+}
+
+input[type="date"]:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+}
+
+
+.submit-btn {
+  background: linear-gradient(to bottom, #4f86f7, #3b82f6);
+  color: white;
+  font-weight: 600;
+  font-size: 14px;
+  border-radius: 8px;
+  padding: 10px 18px;
+  min-height: 36px;
+  border: none;
+  letter-spacing: 0.01em;
+  box-shadow: 0 2px 5px rgba(59, 130, 246, 0.2),
+    0 1px 2px rgba(59, 130, 246, 0.2);
+  transition: all 0.2s ease;
+}
+
+.submit-btn:hover {
+  background: linear-gradient(to bottom, #3b82f6, #2563eb);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.25);
+}
+
+.submit-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 1px 3px rgba(59, 130, 246, 0.3);
+}
+
+input[type="time"] {
+  appearance: none;
+  -webkit-appearance: none;
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 10px 14px;
+  font-size: 14px;
+  color: #334155;
+  width: 100%;
+  box-sizing: border-box;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  transition: all 0.2s ease;
+  cursor: pointer;
+  font-family: inherit;
+  max-height: 36px;
+  outline: none;
+}
+
+input[type="time"]::-webkit-calendar-picker-indicator {
+  color: #64748b;
+  opacity: 0.8;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  filter: invert(0.4);
+  height: 15px;
+}
+
+input[type="time"]::-webkit-calendar-picker-indicator:hover {
+  opacity: 1;
+  filter: invert(0.6);
+  transform: scale(1.1);
+}
+
+input[type="time"]:hover {
+  border-color: #cbd5e1;
+}
+
+input[type="time"]:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+}
+
+input[name^="status-"] {
+  border: none;
+  border-radius: 6px;
+  padding: 8px 12px;
+  font-weight: 600;
+  text-align: center;
+  width: 100%;
+  box-sizing: border-box;
+  transition: background-color 0.2s ease;
+  outline: none;
+}
+
+/* Status colors */
+input[name^="status-"][value="Pending"] {
+  background-color: #fef9c3;
+  color: #854d0e;
+}
+
+input[name^="status-"][value="Approved"] {
+  background-color: #dcfce7;
+  color: #166534;
+}
+
+input[name^="status-"][value="Rejected"] {
+  background-color: #fee2e2;
+  color: #b91c1c;
+}
+
+/* Delete button styling */
+.delete-btn {
+  background-color: #f43f5e;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  width: 32px;
+  height: 32px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  outline: none;
+}
+
+.delete-btn:hover {
+  background-color: #e11d48;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 6px rgba(225, 29, 72, 0.15);
+}
+
+.delete-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 1px 2px rgba(225, 29, 72, 0.15);
+}
+
+.delete-btn i {
+  font-size: 14px;
+}
+.status-badge.approved {
+  background-color: #28a745;
+  color: white;
+}
+
+.status-badge.rejected {
+  background-color: #dc3545;
+  color: white;
+}
